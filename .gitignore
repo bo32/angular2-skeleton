@@ -38,3 +38,13 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+.vscode
+.editorconfig
+angular-cli.json
+e2e/*
+karma.conf.js
+node_modules/
+package.json
+protractor.conf.js
+tslint.json

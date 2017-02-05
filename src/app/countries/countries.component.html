@@ -1,0 +1,30 @@
+
+<h3>
+  Countries works!
+</h3>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div ngFormGroup="country">
+    <div class="form-group">
+      <label for="countryCode">Country code</label>
+      <input type="text" class="form-control"
+        id="countryCode" 
+        [(ngModel)]="country.code"  
+        name="countryCode" 
+        required
+        #countryCode="ngModel"/>
+        <button (click)="onSubmit(country.code)">Send</button>
+    </div>
+  </div>
+  <p>{{country.name}}</p>
+</form>
+
+<hr>
+
+<form>
+  <button (click)="onGetAllCountries()">Show all countries</button>
+  <ul>
+    <li *ngFor="let item of items">{{item.name}}: {{item.alpha2_code}}</li>
+  </ul>
+</form>
+
